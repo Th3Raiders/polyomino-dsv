@@ -51,7 +51,7 @@ Les mots de Dyck encodent les **polyominos parallélogrammes** : chaque montée 
 correspond à un pas vers le haut, chaque descente $b$ à un pas vers la droite. 
 Le chemin trace le contour supérieur du polyomino.
 
-![Bijection entre les mots de dycks et les polyominos parallélogrammes](assets/dyck.png)
+![Bijection entre les mots de dycks et les polyominos parallélogrammes](assets/dick.png)
 
 C'est l'un des premiers exemples historiques de la méthode DSV : la bijection entre 
 mots de Dyck et polyominos parallélogrammes permet d'énumérer ces derniers par périmètre,
