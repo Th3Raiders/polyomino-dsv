@@ -20,7 +20,7 @@ dans des problèmes de compression ou de pavage.
 de taille n croît exponentiellement, et aucune formule close ni série génératrice n'est connue
 pour la classe entière. C'est un problème ouvert depuis plus de 60 ans.
 
-La méthode DSV ne résout pas ce problème général — elle offre un cadre rigoureux pour énumérer
+La méthode DSV ne résout pas ce problème général, elle offre un cadre rigoureux pour énumérer
 certaines **sous-classes bien choisies**.
 
 # La méthode DSV
