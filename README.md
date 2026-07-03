@@ -40,7 +40,7 @@ $$C_n = \frac{1}{n+1}\binom{2n}{n} \implies 1, 1, 2, 5, 14, 42, 132, \dots$$
 
 Les mots de Dyck sont engendrés par la grammaire :
 
-$$S \to \varepsilon \mid a \, S \, b \, S$$
+$$S \to \varepsilon \mid a \ S \ b \ S$$
 
 Cette grammaire donne directement l'équation fonctionnelle sur la série génératrice 
 $C(x) = \sum_{n \geq 0} C_n x^n$ :
