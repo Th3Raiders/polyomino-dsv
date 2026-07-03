@@ -28,35 +28,32 @@ La méthode DSV consiste à établir une bijection entre les mots générés par
 algébrique et des polyominos. Dès lors que cette bijection est établie, on traduit la grammaire
 en un système d'équations sur les séries formelles.
 
-Pour chaque non-terminal $A_i$, on associe une série formelle $F_i(x, y)$ où $x$ et $y$ 
-marquent respectivement la largeur et la hauteur du polyomino. On obtient alors un système 
-d'équations polynomiales :
+## Exemple : mots de Dyck et polyominos parallélogrammes
 
-$$F_1(x, y) = P_1(x, y, F_1, \dots, F_n)$$
+Un **mot de Dyck** de longueur $2n$ est un mot sur $\{a, b\}$ tel que :
+- le mot contient exactement $n$ lettres $a$ et $n$ lettres $b$
+- tout préfixe contient au moins autant de $a$ que de $b$
 
-$$\vdots$$
+Ils sont comptés par les **nombres de Catalan** :
 
-$$F_n(x, y) = P_n(x, y, F_1, \dots, F_n)$$
+$$C_n = \frac{1}{n+1}\binom{2n}{n} \implies 1, 1, 2, 5, 14, 42, 132, \dots$$
 
-où chaque $P_i$ est un polynôme reflétant les productions de la grammaire :
-- un **terminal** $a$ contribue par un facteur $x$ ou $y$ selon sa nature
-- un **non-terminal** $A_j$ contribue par $F_j(x, y)$
-- la **concaténation** devient un produit, l'**union** devient une somme
+Les mots de Dyck sont engendrés par la grammaire :
 
-Par exemple, pour la grammaire $S \to aSb \mid \varepsilon$ correspondant aux 
-polyominos parallélogrammes rectangulaires :
+$$S \to \varepsilon \mid a \, S \, b \, S$$
 
-$$F(x, y) = x \cdot y \cdot F(x, y) + 1$$
+Cette grammaire donne directement l'équation fonctionnelle sur la série génératrice 
+$C(x) = \sum_{n \geq 0} C_n x^n$ :
 
-Ce qui donne par résolution :
+$$C(x) = 1 + x \cdot C(x)^2 \implies C(x) = \frac{1 - \sqrt{1 - 4x}}{2x}$$
 
-$$F(x, y) = \frac{1}{1 - xy}$$
+Les mots de Dyck encodent les **polyominos parallélogrammes** : chaque montée $a$ 
+correspond à un pas vers le haut, chaque descente $b$ à un pas vers la droite. 
+Le chemin trace le contour supérieur du polyomino.
 
-Dans le cas général, le système est résolu par **substitution**, **point fixe** 
-ou **méthode du noyau**, pour obtenir une expression explicite de $F(x,y)$.
-On prouve alors que $F(x,y)$ est une **série algébrique**, ce qui constitue le 
-résultat central de la méthode DSV.
-
+C'est l'un des premiers exemples historiques de la méthode DSV : la bijection entre 
+mots de Dyck et polyominos parallélogrammes permet d'énumérer ces derniers par périmètre,
+et prouve que leur série génératrice est **algébrique**.
 # Caractéristiques
 
 - Définir une grammaire algébrique avec terminaux, non-terminaux et epsilon
