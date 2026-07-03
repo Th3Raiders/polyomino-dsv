@@ -4,7 +4,7 @@
 
 On propose ici une implémentation fonctionnelle en OCaml de la méthode DSV (Delest-Viennot)
 pour énumérer des polyominos au travers de grammaires algébriques.
-Réalisé durant mon stage de recherche au **GR2IF** (Groupe de Recherche Rouennais en 
+Réalisé durant mon stage de recherche au laboratoire **GR2IF** (Groupe de Recherche Rouennais en 
 Informatique Fondamentale), Université de Rouen.
 
 # Qu'est-ce qu'un polyomino ?
