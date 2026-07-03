@@ -1,32 +1,50 @@
 <h1 align="center">Dans le cadre de mon stage de licence</h1>
 
-# Énumération des polyominos reposant sur les grammaires algébriques ( Méthode DSV )
-On propose ici, une implémentation fonctionnelle en OCaml de la méthode DSV(Delest-Viennot) pour énumérer des polyominos au travers de grammaires algébriques.
+# Énumération des polyominos reposant sur les grammaires algébriques (Méthode DSV)
 
-Fait durant mon stage de recherche au **GR2IF** ( Groupe de Recherche Rouennais en Informatique Fondamentale), Université de Rouen.
+On propose ici une implémentation fonctionnelle en OCaml de la méthode DSV (Delest-Viennot)
+pour énumérer des polyominos au travers de grammaires algébriques.
+Réalisé durant mon stage de recherche au **GR2IF** (Groupe de Recherche Rouennais en 
+Informatique Fondamentale), Université de Rouen.
 
-# Qu'est-ce qu'un polyomino ? 
-Les polyominos sont des figures géométriques discrètes formées de cellules carées connexes.
-Leur énumération est un problème central en combinatoire, avec des applications en physique statistique, modèle de percolation, modélisation de repliement de protéines ou bien en informatique dans des problèmes de compression ou de pavage.
+# Qu'est-ce qu'un polyomino ?
 
+Les polyominos sont des figures géométriques discrètes formées de cellules carrées connexes.
+Leur énumération est un problème central en combinatoire, avec des applications en physique 
+statistique, modélisation de percolation, repliement de protéines, ou encore en informatique 
+dans des problèmes de compression ou de pavage.
 
 ![Figure d'un polyomino](assets/polyomino.svg)
 
+**À ce jour, il est impossible d'énumérer tous les polyominos.** Le nombre total de polyominos
+de taille n croît exponentiellement, et aucune formule close ni série génératrice n'est connue
+pour la classe entière. C'est un problème ouvert depuis plus de 60 ans.
 
-**À ce jour, il est impossible d'énumérer tout les polyominos**. Le nombre total de polyominos de périmètre n croît exponentiellement, et aucune formule close ni série génératrice n'est connue pour la classe entière.
-C'est un problème ouvert depuis 60 ans.
-La méthode DSV ne résout pas ce problème général, elle offre un cadre pour énumérer certaines **sous-classes bien choisies**.
+La méthode DSV ne résout pas ce problème général — elle offre un cadre rigoureux pour énumérer
+certaines **sous-classes bien choisies**.
 
 # La méthode DSV
-La méthode DSV consiste a établir une bijection entre les mots générés par une grammaire algébrique et des polyominos.
-Dès lors que cette bijection est établie, il s'agit de traduire la grammaire en un systeme d'équations sur les séries formelles.
-Pour chaque non-terminal A(i), on obtient une équation :
 
-Ce système est ensuite résolu par substitution, point fixe ou méthode du noyau pour obtenir une expression explicite de F(X,Y), dont on prouve qu'elle est une série algébrique.
+La méthode DSV consiste à établir une bijection entre les mots générés par une grammaire 
+algébrique et des polyominos. Dès lors que cette bijection est établie, on traduit la grammaire
+en un système d'équations sur les séries formelles.
+
+Pour chaque non-terminal A, on obtient une équation fonctionnelle. Ce système est ensuite résolu
+par substitution, point fixe ou méthode du noyau, pour obtenir une expression explicite de 
+F(X,Y), dont on prouve qu'elle est une série algébrique.
 
 # Caractéristiques
-- Définir une grammaire algébrique avec les terminaux,non terminaux et epsilon.
-- Générer tout les mots d'une grammaire selon des bornes configurables.
-- Filtrage parametrées à l'aide de fonction de mesure et de bornes
-- Prends en compte la recursivité et les grammaires ambiguie, afin de ne pas déborder sur la pile.
 
+- Définir une grammaire algébrique avec terminaux, non-terminaux et epsilon
+- Générer tous les mots d'une grammaire selon des bornes configurables
+- Filtrage paramétré à l'aide de fonctions de mesure (`fl`) et de bornes (`bl`)
+- Gestion des grammaires récursives et ambiguës sans débordement de pile
+
+# Fonctionnement
+
+La fonction principale **iter** prend en argument une grammaire `g`, une liste de fonctions 
+de mesure `fl` et une liste de bornes `bl`, toutes deux de même longueur.
+
+À chaque nouvelle dérivation, l'invariant **∀ i, fl[i](w) ≤ bl[i]** est vérifié.
+Si l'invariant n'est plus satisfait, la branche est élagée. Cela garantit la terminaison
+du programme tout en restant entièrement paramétrable.
