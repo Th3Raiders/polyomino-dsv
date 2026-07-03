@@ -1,0 +1,4 @@
+(library
+ (name polyo)
+ (public_name polyo)
+ (libraries))

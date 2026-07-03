@@ -1,0 +1,5 @@
+(executable
+ (public_name polyo)
+ (name main)
+ (flags (:standard -w -A))
+ (libraries polyo))

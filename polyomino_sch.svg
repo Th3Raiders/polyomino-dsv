@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All 18 Pentominoes, including the reflections of asymmetrical ones  -->
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="300" viewBox="0 0 850 300" stroke="#000000">
+	<defs>
+		<g id="F">
+			<path fill="#DDBB99" stroke-width="3" d="M 25 0 h 50 v 25 h -25 v 50 h -25 v -25 h -25 v -25 h 25 z"/>
+			<path fill="none" stroke-width="0.25" d="M 50 0 v 25 h -25 v 25 h 25"/>
+		</g>
+		<g id="L">
+			<path fill="#CCCC88" stroke-width="3" d="M 25 0 h 25 v 100 h -50 v -25 h 25 z"/>
+			<path fill="none" stroke-width="0.25" d="M 50 25 h -25 v 25 h 25 v 25 h -25 v 25"/>
+		</g>
+		<g id="P">
+			<path fill="#BBDD99" stroke-width="3" d="M 0 0 h 50 v 75 h -25 v -25 h -25 z"/>
+			<path fill="none" stroke-width="0.25" d="M 25 0 v 50 h 25 v -25 h -50"/>
+		</g>
+		<g id="S">
+			<path fill="#AAEEAA" stroke-width="3" d="M 25 0 h 25 v 75 h -25 v 25 h -25 v -50 h 25 z"/>
+			<path fill="none" stroke-width="0.25" d="M 25 25 h 25 v 25 h -25 v 25 h -25"/>
+		</g>
+		<g id="Y">
+			<path fill="#CC88CC" stroke-width="3" d="M 25 0 h 25 v 100 h -25 v -50 h -25 v -25 h 25 z"/>
+			<path fill="none" stroke-width="0.25" d="M 50 25 h -25 v 25 h 25 v 25 h -25"/>
+		</g>
+		<g id="Z">
+			<path fill="#DD99BB" stroke-width="3" d="M 25 0 h 50 v 25 h -25 v 50 h -50 v -25 h 25 z"/>
+			<path fill="none" stroke-width="0.25" d="M 25 75 v -75 h 25 v 25 h -25 v 25 h 25"/>
+		</g>
+	</defs>
+	<g id="I">
+		<path fill="#EEAAAA" stroke-width="3" d="M 50 25 h 25 v 125 h -25 z"/>
+		<path fill="none" stroke-width="0.25" d="M 50 50 h 25 v 25 h -25 v 25 h 25 v 25 h -25"/>
+	</g>
+	<use id="F_1" href="#F" x="125" y="75"/>
+	<use id="F_2" href="#F" x="-300" y="75" transform="scale(-1,1)"/>
+	<use id="L_1" href="#L" x="350" y="50"/>
+	<use id="L_2" href="#L" x="-475" y="50" transform="scale(-1,1)"/>
+	<use id="P_1" href="#P" x="525" y="75"/>
+	<use id="P_1" href="#P" x="-650" y="75" transform="scale(-1,1)"/>
+	<use id="S_1" href="#S" x="675" y="50"/>
+	<use id="S_2" href="#S" x="-800" y="50" transform="scale(-1,1)"/>
+	<g id="T">
+		<path fill="#99DDBB" stroke-width="3" d="M 25 200 h 75 v 25 h -25 v 50 h -25 v -50 h -25 z"/>
+		<path fill="none" stroke-width="0.25" d="M 75 225 v -25 h -25 v 25 h 25 v 25 h -25"/>
+	</g>
+	<g id="U">
+		<path fill="#88CCCC" stroke-width="3" d="M 125 225 h 25 v 25 h 25 v -25 h 25 v 50 h -75 z"/>
+		<path fill="none" stroke-width="0.25" d="M 125 250 h 25 v 25 h 25 v -25 h 25"/>
+	</g>
+	<g id="V">
+		<path fill="#99BBDD" stroke-width="3" d="M 225 250 h 50 v -50 h 25 v 75 h -75 z"/>
+		<path fill="none" stroke-width="0.25" d="M 250 250 v 25 h 25 v -25 h 25 v -25 h -25"/>
+	</g>
+	<g id="W">
+		<path fill="#AAAAEE" stroke-width="3" d="M 325 250 h 25 v -25 h 25 v -25 h 25 v 50 h -25 v 25 h -50 z"/>
+		<path fill="none" stroke-width="0.25" d="M 350 275 v -25 h 25 v -25 h 25"/>
+	</g>
+	<g id="X">
+		<path fill="#BB99DD" stroke-width="3" d="M 450 200 h 25 v 25 h 25 v 25 h -25 v 25 h -25 v -25 h -25 v -25 h 25 z"/>
+		<path fill="none" stroke-width="0.25" d="M 450 225 h 25 v 25 h -25 z"/>
+	</g>
+	<use id="Y_1" href="#Y" x="525" y="175"/>
+	<use id="Y_2" href="#Y" x="-650" y="175" transform="scale(-1,1)"/>
+	<use id="Z_1" href="#Z" x="650" y="200"/>
+	<use id="Z_2" href="#Z" x="-825" y="200" transform="scale(-1,1)"/>
+</svg>
