@@ -10,6 +10,7 @@ Les polyominos sont des figures géométriques discrètes formées de cellules c
 Leur énumération est un problème central en combinatoire, avec des applications en physique statistique, modèle de percolation, modélisation de repliement de protéines ou bien en informatique dans des problèmes de compression ou de pavage.
 
 
+![Figure d'un polyomino](assets/polyomino.svg)
 
 
 **À ce jour, il est impossible d'énumérer tout les polyominos**. Le nombre total de polyominos de périmètre n croît exponentiellement, et aucune formule close ni série génératrice n'est connue pour la classe entière.
